@@ -197,7 +197,7 @@ def _exec_command(adb_cmd):
         result = e.returncode, t.read()
     else:
         result = 0, output
-        print('\n' + result[1])
+        print('\n' + result[1].decode("utf8"))
 
     return result
 
